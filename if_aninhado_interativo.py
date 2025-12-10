@@ -11,7 +11,7 @@ tipo_de_conta = "normal", "universitaria"
 
 #PERGUNTE AO USUARIO QUE TIPO DE CONTA
 
-tipo_de_conta = input("Digite o tipo de conta(normal/universitaria):").lower
+tipo_de_conta = input("Digite o tipo de conta(normal/universitaria):").lower()
 
 #PERGUNTE O VALOR DO SAQUE
 
@@ -37,4 +37,4 @@ else:
     print("Sistema não reconhece esse tipo de conta, entre em contato com seu gerente.")
 
 
-     #voltar nesse codigo 10/12/2025
+   
