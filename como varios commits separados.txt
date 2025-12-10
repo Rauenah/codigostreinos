@@ -1,0 +1,27 @@
+#Assim, cada arquivo fica com um commit separado e mais fácil de rastrear.
+
+
+
+git add operadores_associação.py
+git commit -m "Adiciona operadores de associação"
+
+git add operadores_de_atribuição.py
+git commit -m "Adiciona operadores de atribuição"
+
+git add operadores_de_comparação.py
+git commit -m "Adiciona operadores de comparação"
+
+git add operadores_de_memoria.py
+git commit -m "Adiciona operadores de memória"
+
+git add "operadores lógicos.py"
+git commit -m "Adiciona operadores lógicos"
+
+git push origin main
+
+operadores_de_atribuição
+
+
+git add .
+git commit -m "Adicionando operadores: associação, atribuição, comparação, memória e lógicos"
+git push origin main

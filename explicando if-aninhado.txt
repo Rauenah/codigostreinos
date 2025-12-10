@@ -1,0 +1,82 @@
+Esse código é um exemplo de **estrutura condicional em Python** que simula regras de saque em diferentes tipos de conta. 
+
+---
+
+### 1. Definição das variáveis
+```python
+conta_normal = False
+conta_universitaria = False
+
+saldo = 2000
+saque = 2500
+cheque_especial = 450
+```
+- `conta_normal` e `conta_universitaria` são **flags booleanas** (True/False) que dizem qual tipo de conta está ativa.
+- `saldo` → dinheiro disponível na conta.
+- `saque` → valor que o cliente quer retirar.
+- `cheque_especial` → limite extra que pode ser usado além do saldo.
+
+---
+
+### 2. Estrutura condicional principal
+```python
+if conta_normal:
+    ...
+elif conta_universitaria:
+    ...
+else:
+    ...
+```
+- Se `conta_normal` for **True**, o programa entra no primeiro bloco.
+- Se não for, mas `conta_universitaria` for **True**, entra no segundo bloco.
+- Se nenhum dos dois for **True**, cai no `else` e mostra que o sistema não reconhece o tipo de conta.
+
+---
+
+### 3. Regras para conta normal
+```python
+if saldo >= saque:
+    print("Saque realizado com sucesso! ")
+elif saque <= (saldo + cheque_especial):
+    print("Saque realizado com uso do cheque especial")
+else:
+    print("Não foi possivel realizar saque, saldo insuficiente")
+```
+- Se o saldo for suficiente → saque normal.
+- Se não for, mas o valor do saque couber dentro do saldo + cheque especial → saque usando cheque especial.
+- Caso contrário → saldo insuficiente.
+
+---
+
+### 4. Regras para conta universitária
+```python
+if saldo >= saque:
+    print("Saque realizado com sucesso")
+else:
+    print("Saldo insuficiente! ")
+```
+- Conta universitária **não tem cheque especial**.  
+- Só permite saque se o saldo for suficiente.
+
+---
+
+### 5. Caso nenhum tipo de conta seja reconhecido
+```python
+else:
+    print("Sistema não reconhece esse tipo de conta, entre em contato com seu gerente.")
+```
+- Se tanto `conta_normal` quanto `conta_universitaria` forem **False**, cai aqui.
+
+---
+
+### Resultado com os valores atuais
+- `conta_normal = False`
+- `conta_universitaria = False`
+
+Portanto, o programa vai imprimir:
+```
+Sistema não reconhece esse tipo de conta, entre em contato com seu gerente.
+```
+
+---
+
